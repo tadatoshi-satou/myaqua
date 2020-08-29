@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'Admin\ShopController@index');
+//Route::get('/', 'Admin\ShopController@index');
+Route::get('/', 'Admin\ShopController@category');
 Route::group(['middleware' => ['auth']], function () {
     
     Route::get('/mycart','Admin\ShopController@myCart');

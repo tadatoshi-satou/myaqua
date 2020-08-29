@@ -10964,3 +10964,13 @@ img.incart {
   color: #fefefe;
 }
 
+.category {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1em;
+  background-color: #fefefe;
+  border: solid 3px #000000;
+}
+

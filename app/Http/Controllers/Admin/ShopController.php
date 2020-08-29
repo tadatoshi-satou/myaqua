@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Cart;
 use App\Product;
+use App\Category;
 
 class ShopController extends Controller
 {
@@ -49,5 +50,11 @@ class ShopController extends Controller
     {
         $checkout_info = $cart->checkoutCart();
         return view('checkout');
+    }
+    
+    public function category()
+    {
+        $categories = Category::all();
+        return view('top',compact('categories'));
     }
 }
