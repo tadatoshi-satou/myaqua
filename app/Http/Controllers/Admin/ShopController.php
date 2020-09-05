@@ -12,12 +12,48 @@ use App\Category;
 class ShopController extends Controller
 {
     //
+    function __construct(Product $product, Category $category)
+    {
+        $this->product = $product;
+        $this->category = $category;
+    }
+    
     public function index()
     {
         $products = Product::Paginate(6);
+        // $md = new Category();
+        // $data = $md->getData($category_id);
+        // $query = Product::query();
+        // $query->where('category_id',$request->category_id);
+        // $category = $query->get();
+        // $category = Product::all();
+        // if($request = $category->category_id){
+            
+        // }
+        
         return view('shop',compact('products'));
     }
+    public function fish()
+    {
+        $query = Product::query();
+        $products = $query->where('category_id',1)->paginate(6);
+        return view('fish',compact('products'));
+    }
     
+    public function articles()
+    {
+        $query = Product::query();
+        $products = $query->where('category_id',2)->paginate(6);
+        
+        return view('articles', compact('products'));
+    }
+    public function layouts()
+    {
+        $query = Product::query();
+        $products = $query->where('category_id',3)->paginate(6);
+        
+        return view('articles', compact('products'));
+    }
      public function myCart(Cart $cart)
    {
         $data = $cart->showCart();
@@ -57,4 +93,5 @@ class ShopController extends Controller
         $categories = Category::all();
         return view('top',compact('categories'));
     }
+    
 }

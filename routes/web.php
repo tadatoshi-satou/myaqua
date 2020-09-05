@@ -11,8 +11,13 @@
 |
 */
 
-//Route::get('/', 'Admin\ShopController@index');
+Route::get('/index/{category_id?}', 'Admin\ShopController@index')->name('index.show');
+Route::get('/fish', 'Admin\ShopController@fish');
+Route::get('/articles', 'Admin\ShopController@articles');
+Route::get('/layouts', 'Admin\ShopController@layouts');
+
 Route::get('/', 'Admin\ShopController@category');
+
 Route::group(['middleware' => ['auth']], function () {
     
     Route::get('/mycart','Admin\ShopController@myCart');

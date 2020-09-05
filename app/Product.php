@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Product extends Model
 {
@@ -16,17 +17,21 @@ class Product extends Model
         return $this->hasOne('App\Category', 'category_id', 'category_id');
     }
     
-    public function getProductList(array $condition = [])
+    public function getData($category_id=null)
     {
-        // パラメータの取得
-        $category_id = array_get($condition, 'category_id');
-         // Eager ロードの設定を追加
-        $query = $this->with('category')->orderBy('product_id', 'desc');
-        // カテゴリーIDの指定
-        if ($category_id) {
-            $query->where('category_id', $category_id);
-        }
+        $query = DB::table($this->table);
+        if($category_id != null) $query->where('category_id',$category_id);
+        $data = $query->get();
         
+        return $data;
+    }
+    
+    public function getFish()
+    {
+        $query = DB::table($this->table);
+        $query->where('category_id',1);
+        $result = $query->paginate(6);
         
+        return $result;
     }
 }

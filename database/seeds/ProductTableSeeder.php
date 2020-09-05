@@ -153,6 +153,147 @@ class ProductTableSeeder extends Seeder
            'fee' => 1100,
            'imgpath' => 'kori.jpg',
        ]);
+        DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'GEX グラステリア サイレント 200キューブH',
+           'detail' => '20cmキューブ水槽 水槽セット',
+           'fee' => 2780,
+           'imgpath' => 'gex20.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'GEX グラステリア サイレント 360スリムH',
+           'detail' => '36cmスリム水槽 水槽セット 初心者',
+           'fee' => 3656,
+           'imgpath' => 'gex36.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'GEX グラステリア アクアキャンバス',
+           'detail' => 'サイレントセット450スリム',
+           'fee' => 8860,
+           'imgpath' => 'gex45.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'GEX ラピレスRV60GT LEDセット',
+           'detail' => '水槽セット アクアリウム',
+           'fee' => 11763,
+           'imgpath' => 'gex60.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'GEX ラピレスRV90 LEDセット',
+           'detail' => '90cm水槽セット',
+           'fee' => 32592,
+           'imgpath' => 'gex90.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'レッドシー Fresher 130 ホワイト',
+           'detail' => '60cm水槽 キャビネットセット',
+           'fee' => 105000,
+           'imgpath' => 'cabi60.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'レッドシー Fresher 200 ホワイト',
+           'detail' => '90cm水槽 キャビネットセット',
+           'fee' => 145000,
+           'imgpath' => 'cabi90.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'エーハイム クラシックフィルター 2213',
+           'detail' => 'ろ材付きセット 水槽用外部フィルター',
+           'fee' => 9480,
+           'imgpath' => 'eheim2213.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'サプリソイル ノーマル',
+           'detail' => '3リットル',
+           'fee' => 1130,
+           'imgpath' => 'soil3.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 2,
+           'name' => 'サプリソイル パウダー',
+           'detail' => '8リットル',
+           'fee' => 2026,
+           'imgpath' => 'soil8.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => 'ロタラ',
+           'detail' => '10本',
+           'fee' => 800,
+           'imgpath' => 'rotara.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => 'ヘアーグラス',
+           'detail' => '3個',
+           'fee' => 2050,
+           'imgpath' => 'hea.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => '南米ウィローモス',
+           'detail' => '1パック',
+           'fee' => 950,
+           'imgpath' => 'mosu.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => 'ポゴステモン',
+           'detail' => '1株',
+           'fee' => 1150,
+           'imgpath' => 'pogo.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => '流木',
+           'detail' => 'Sサイズ',
+           'fee' => 420,
+           'imgpath' => 'rutus.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => '流木',
+           'detail' => 'Mサイズ',
+           'fee' => 560,
+           'imgpath' => 'rutum.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => '流木',
+           'detail' => 'Lサイズ',
+           'fee' => 830,
+           'imgpath' => 'rutul.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => '魔光石',
+           'detail' => '3kg',
+           'fee' => 3198,
+           'imgpath' => 'makou.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => '風山石',
+           'detail' => '5kg',
+           'fee' => 3320,
+           'imgpath' => 'fuzan.jpg',
+       ]);
+       DB::table('products')->insert([
+           'category_id' => 3,
+           'name' => '溶岩石',
+           'detail' => '3個',
+           'fee' => 1350,
+           'imgpath' => 'yogan.jpg',
+       ]);
+       
        
     }
 }
